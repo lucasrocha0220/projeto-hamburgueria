@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hamburgueria do Rapa - Hambúrgueres artesanais incríveis.">
+    <title>Hamburgueria do Rapa</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🍔 Hamburgueria do Rapa</div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#sobremesas">Sobremesas</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+        <h1>Os Melhores Hambúrgueres da Cidade</h1>
+        <p>Sabor artesanal feito na hora!</p>
+
+        <a href="#cardapio" class="btn">Ver Cardápio</a>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides">
+                <img src="img/img1.png" alt="Ambiente">
+
+            </div>
+
+            <div class="mySlides">
+                <img src="img/img2.png" alt="Hambúrguer">
+
+            </div>
+
+            <div class="mySlides">
+                <img src="img/img3.png" alt="Sabor">
+
+            </div>
+
+        </div>
+
+        <div style="text-align:center; margin-top:10px;">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <p class="sobre-texto">
+            Mais do que hambúrgueres, nós servimos experiências feitas com ingredientes de qualidade e muito sabor, com
+            chefes muito experientes que preparam cada hambúrguer com carinho e dedicação. Venha nos visitar e descubra
+            o verdadeiro sabor do hambúrguer artesanal!
+        </p>
+    </section>
+
+
+
+    <!-- WHATSAPP -->
+    <div class="whatsapp-icon">
+
+        <a href="https://wa.me/5511965079365" target="_blank" class="btn-whatsapp"> <img src="img/whatsapp (2) (1).png"
+                alt="WhatsApp" width="100px" height="75px" ></a>
+    </div>
+<div class="Carinho"></div>
+ <a href="https://wa.me/5511965079365" target="_blank" class="btn-whatsapp"></a>
+
+
+    <!-- CARDÁPIO -->
+    <section id="cardapio">
+        <h2>Cardápio</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="img/smash-burger.jpg" alt="Smash Burger" height="130px" width="160px">
+                <h3>Smash Burger</h3>
+                <span>R$25</span>
+                <button onclick="adicionar(event)">Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/bacon_burger_-_01 (1).webp" alt="Cheddar Bacon" height="130px" width="160px">
+                <h3>Cheddar Bacon</h3>
+                <span>R$30</span>
+                <button onclick="adicionar(event)">Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/c7b55a6d-e2f8-4e3c-959a-ad7b618030c7.jpg" alt="Duplo Cheese" height="130px" width="160px">
+                <h3>Duplo Cheese</h3>
+                <span>R$35</span>
+                <button onclick="adicionar(event)">Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/x-3.jpg" alt="X-Tudo" height="130px" width="160px">
+                <h3>X-Tudo</h3>
+                <span>R$38</span>
+                <button onclick="adicionar(event)">Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/transferir.jfif" alt="Chicken Burger" height="130px" width="160px">
+                <h3>Chicken Burger</h3>
+                <span>R$28</span>
+                <button onclick="adicionar(event)">Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/images (3).jfif" alt="BBQ Bacon" height="130px" width="160px">
+                <h3>BBQ Bacon</h3>
+                <span>R$32</span>
+                <button onclick="adicionar(event)">Adicionar</button>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- SOBREMESAS -->
+    <section id="sobremesas">
+        <h2>Sobremesas</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="img/transferir (1).jfif" alt="Milkshake" height="130px" width="160px">
+                <h3>Milkshake</h3>
+                <span>R$18</span>
+                <button onclick="adicionar(event)">Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/transferir (2).jfif" alt="Brownie" height="130px" width="160px">
+                <h3>Brownie</h3>
+                <span>R$15</span>
+                <button onclick="adicionar(event)">Adicionar</button>
+            </div>
+
+            <div class="card">
+                    <img src="img/images (1).jfif" alt="sorvete " height="130px" width="160px">
+                <h3>Sorvete</h3>
+                <span>R$12</span>
+                <button onclick="adicionar(event)">Adicionar</button>
+            </div>
+
+            <div class="card">
+                    <img src="img/images.webp" alt="Petit Gateau" height="130px" width="160px">
+                <h3>Petit Gateau</h3>
+                <span>R$20</span>
+                <button onclick="adicionar(event)">Adicionar</button>
+            </div>
+
+              <div class="card">
+                    <img src="img/images (2).jfif" alt="Bolos" height="130px" width="160px">
+                <h3>Bolos</h3>
+                <span>R$15</span>
+                <button onclick="adicionar(event)">Adicionar</button>
+            </div>
+        </div>
+
+        <!-- BEBIDAS -->
+        <section id="bebidas">
+            <h2>Bebidas</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                        <img src="img/transferir (3).jfif" alt="refrigerante lata" height="130px" width="160px">
+                    <h3>Refrigerante de Lata</h3>
+                    <span>R$6</span>
+                    <button onclick="adicionar(event)">Adicionar</button>
+                </div>
+
+                <div class="card">
+                        <img src="img/refrigerante-coque-fanta-sprite-saraburithaile-june-de-junho-o-popular-numa-garrafa-que-mostra-prateleiras-nos-estabelecimentos-207459249.webp" alt="Refrigerante de 2L" height="130px" width="160px">
+                    <h3>Refrigerante de 2L</h3>
+                    <span>R$12</span>
+                    <button onclick="adicionar(event)">Adicionar</button>
+                </div>
+
+                <div class="card">
+                        <img src="img/transferir (4).jfif" alt="Suco Natural" height="130px" width="160px">
+                    <h3>Suco Natural</h3>
+                    <span>R$10</span>
+                    <button onclick="adicionar(event)">Adicionar</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/images (2).jpg" alt="Água Mineral" height="130px" width="160px">
+                    <h3>Água Mineral</h3>
+                    <span>R$5</span>
+                    <button onclick="adicionar(event)">Adicionar</button>
+                </div>
+            
+                <div class="card">
+                    <img src="img/mate_zona_sul_fernando_mafra.jpg" alt="Chá Gelado" height="130px" width="160px">
+                    <h3>Chá Gelado</h3>
+                    <span>R$9</span>
+                    <button onclick="adicionar(event)">Adicionar</button>
+                </div>
+
+            </div>
+        </section>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+        <h2>Contato</h2>
+
+        <form onsubmit="enviar(event)">
+            <input type="text" id="nome" placeholder="Nome" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <textarea id="mensagem" placeholder="Mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <p id="msg"></p>
+    </section>
+
+
+    <footer>
+        <p>© 2026 Hamburgueria do Rapa</p>
+    </footer>
+
+</body>
+
+</html>

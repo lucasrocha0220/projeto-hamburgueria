@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Processando Pedido</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #1e1e2f;
+    color: white;
+}
+
+/* voltar */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 18px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* tela */
+.waiting-room {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.codigo {
+    font-size: 22px;
+    margin: 15px 0;
+    opacity: 0.8;
+}
+
+/* botão */
+.btn {
+    padding: 14px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ffae00, #ff0000);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: none; /* começa escondido */
+}
+
+.btn:hover {
+    transform: scale(1.08);
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="back-btn">← Voltar ao Cardápio</a>
+
+<div class="waiting-room">
+
+    <h1>Processando Pedido...</h1>
+
+    <div class="codigo">
+        AGUARDE...
+    </div>
+
+    <p id="status">LIBERANDO PEDIDO...</p>
+
+    <button class="btn" id="btn">
+        Ir para WhatsApp
+    </button>
+
+</div>
+
+<script>
+
+const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+const btn = document.getElementById("btn");
+
+setTimeout(() => {
+    document.getElementById("status").innerText = "PEDIDO LIBERADO!";
+
+    btn.style.display = "inline-block";
+
+}, 5000);
+
+btn.addEventListener("click", () => {
+
+    let mensagem = "Olá! Gostaria de fazer o seguinte pedido:%0A%0A";
+    let total = 0;
+
+    if (carrinho.length === 0) {
+        mensagem += "Carrinho vazio";
+    } else {
+
+        carrinho.forEach(item => {
+            mensagem += `- ${item.nome} (R$ ${item.preco.toFixed(2)})%0A`;
+            total += item.preco;
+        });
+
+        mensagem += `%0ATotal: R$ ${total.toFixed(2)}`;
+    }
+
+    const numeroWhatsApp = "5511965079365";
+
+    const url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
+
+    window.open(url, "_blank");
+});
+
+</script>
+
+</body>
+</html>

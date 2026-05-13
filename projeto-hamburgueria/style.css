@@ -1,0 +1,257 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* WHATSAPP ICON */
+.whatsapp-icon {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 9999;
+}
+
+.whatsapp-icon img {
+  width: 60px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-icon img:hover {
+  transform: scale(1.1);
+}
+
+.imagem-fixa {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#111;
+    color:white;
+}
+
+/* HEADER */
+header{
+    background:#000;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#ff9900;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:10px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ff9900;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(to right,#ff6600,#ff9900);
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.btn{
+    background:#000;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.btn:hover{
+    background:white;
+    color:#000;
+}
+
+/* SECTIONS */
+section{
+    padding:60px 20px;
+}
+
+h2{
+    text-align:center;
+    font-size:35px;
+    margin-bottom:30px;
+    color:#ff9900;
+}
+
+.sobre-texto{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+}
+
+/* CARDS */
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#222;
+    width:250px;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.card span{
+    display:block;
+    font-size:22px;
+    color:#ff9900;
+    margin:10px 0;
+}
+
+.card button{
+    background:#ff9900;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* PEDIDO */
+.pedido{
+    text-align:center;
+    margin-top:30px;
+    font-size:25px;
+}
+
+/* FORM */
+form{
+    max-width:500px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+input, textarea{
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+}
+
+form button{
+    background:#ff9900;
+    border:none;
+    padding:12px;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+#msg{
+    text-align:center;
+    margin-top:15px;
+}
+
+/* SLIDESHOW */
+.slideshow-container{
+    max-width:700px;
+    margin:auto;
+}
+
+.mySlides{
+    display:none;
+    position:relative;
+}
+
+.mySlides img{
+    width:100%;
+    border-radius:10px;
+}
+
+.text{
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    background:rgba(0,0,0,0.6);
+    padding:5px 10px;
+    border-radius:5px;
+}
+
+.dot{
+    height:12px;
+    width:12px;
+    margin:5px;
+    background:#bbb;
+    border-radius:50%;
+    display:inline-block;
+}
+
+.active{
+    background:#ff9900;
+}
+
+/* FOOTER */
+footer{
+    background:#000;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+    .hero h1{
+        font-size:30px;
+    }
+
+    .cards{
+        flex-direction:column;
+        align-items:center;
+    }
+}
