@@ -1,3 +1,8 @@
+// =====================
+// VERCEL WEB ANALYTICS
+// =====================
+import { inject } from '@vercel/analytics';
+inject();
 
 // =====================
 // CONTADOR DE PEDIDOS
@@ -153,37 +158,9 @@ function atualizarCarrinho() {
 }
 
 // =====================
-// FINALIZAR PEDIDO (WHATSAPP)
+// FINALIZAR PEDIDO
 // =====================
 function finalizarPedido() {
-    if (carrinho.length === 0) {
-        alert("Seu carrinho está vazio!");
-        return;
-    }
-
-    let mensagem = "Olá! Gostaria de fazer o seguinte pedido:%0A%0A";
-
-    let total = 0;
-
-    carrinho.forEach(item => {
-        mensagem += `- ${item.nome} (R$ ${item.preco.toFixed(2)})%0A`;
-        total += item.preco;
-    });
-
-    mensagem += `%0ATotal: R$ ${total.toFixed(2)}`;
-
-    const numeroWhatsApp = "5511965079365";
-
-    const url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
-
-    window.open(url, "_blank");
-
-    carrinho = [];
-    atualizarCarrinho();
-}
-
-function finalizarPedido() {
-
     if (carrinho.length === 0) {
         alert("Seu carrinho está vazio!");
         return;
